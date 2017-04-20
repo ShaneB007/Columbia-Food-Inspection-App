@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B43CC1B51EA5215E00E120F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43CC1B41EA5215E00E120F5 /* AppDelegate.swift */; };
-		B43CC1B71EA5215E00E120F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43CC1B61EA5215E00E120F5 /* ViewController.swift */; };
 		B43CC1BA1EA5215E00E120F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B43CC1B81EA5215E00E120F5 /* Main.storyboard */; };
 		B43CC1BD1EA5215E00E120F5 /* ColumbiaFoodInspection.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B43CC1BB1EA5215E00E120F5 /* ColumbiaFoodInspection.xcdatamodeld */; };
 		B43CC1BF1EA5215E00E120F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B43CC1BE1EA5215E00E120F5 /* Assets.xcassets */; };
@@ -18,7 +17,6 @@
 /* Begin PBXFileReference section */
 		B43CC1B11EA5215E00E120F5 /* ColumbiaFoodInspection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColumbiaFoodInspection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B43CC1B41EA5215E00E120F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B43CC1B61EA5215E00E120F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B43CC1B91EA5215E00E120F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B43CC1BC1EA5215E00E120F5 /* ColumbiaFoodInspection.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ColumbiaFoodInspection.xcdatamodel; sourceTree = "<group>"; };
 		B43CC1BE1EA5215E00E120F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,7 +55,6 @@
 			isa = PBXGroup;
 			children = (
 				B43CC1B41EA5215E00E120F5 /* AppDelegate.swift */,
-				B43CC1B61EA5215E00E120F5 /* ViewController.swift */,
 				B43CC1B81EA5215E00E120F5 /* Main.storyboard */,
 				B43CC1BE1EA5215E00E120F5 /* Assets.xcassets */,
 				B43CC1C01EA5215E00E120F5 /* LaunchScreen.storyboard */,
@@ -139,7 +136,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B43CC1B71EA5215E00E120F5 /* ViewController.swift in Sources */,
 				B43CC1BD1EA5215E00E120F5 /* ColumbiaFoodInspection.xcdatamodeld in Sources */,
 				B43CC1B51EA5215E00E120F5 /* AppDelegate.swift in Sources */,
 			);
