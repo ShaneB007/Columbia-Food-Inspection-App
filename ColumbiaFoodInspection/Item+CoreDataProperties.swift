@@ -2,7 +2,7 @@
 //  Item+CoreDataProperties.swift
 //  ColumbiaFoodInspection
 //
-//  Created by Colin Iglehart on 5/1/17.
+//  Created by Shane Bishop on 5/5/17.
 //  Copyright © 2017 Columbia Food Inspection Group. All rights reserved.
 //
 
@@ -16,6 +16,7 @@ extension Item {
         return NSFetchRequest<Item>(entityName: "Item")
     }
 
+    @NSManaged public var favorite: Bool
     @NSManaged public var establishment: Establishment?
     @NSManaged public var inspection: Inspection?
 

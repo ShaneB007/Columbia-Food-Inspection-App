@@ -21,4 +21,25 @@ class Model {
         managedContext = persistentContainer?.viewContext
     }
     
+    
+    func loadData() {
+        let coreDataLoadedKey = "hasLoadedCoreData"
+        
+        guard !UserDefaults.standard.bool(forKey: coreDataLoadedKey) else { return }
+        
+        let items = JSONLoader.load(fileName: "newData")
+        
+       /* for newsCategory in newsCategories {
+            // TODO: - Parse categories
+        } */
+        
+        do {
+            try self.managedContext?.save()
+            
+            UserDefaults.standard.set(true, forKey: coreDataLoadedKey)
+        } catch {
+            return
+        }
+    }
+    
 }

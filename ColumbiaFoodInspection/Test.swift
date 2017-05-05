@@ -15,12 +15,11 @@ import UIKit
 
 class TestViewController: UIViewController {
     
-  var xmlNode = XMLNode()
+ // var items = Items[]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        xmlNode = LoadParser.load(fileName: "xml")
         
         print("Hello")
     }

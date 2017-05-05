@@ -2,7 +2,7 @@
 //  Establishment+CoreDataProperties.swift
 //  ColumbiaFoodInspection
 //
-//  Created by Colin Iglehart on 5/1/17.
+//  Created by Shane Bishop on 5/5/17.
 //  Copyright © 2017 Columbia Food Inspection Group. All rights reserved.
 //
 
@@ -19,5 +19,6 @@ extension Establishment {
     @NSManaged public var address: String?
     @NSManaged public var name: String?
     @NSManaged public var type: String?
+    @NSManaged public var item: Item?
 
 }

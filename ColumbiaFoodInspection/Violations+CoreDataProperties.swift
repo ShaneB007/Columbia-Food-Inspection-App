@@ -2,7 +2,7 @@
 //  Violations+CoreDataProperties.swift
 //  ColumbiaFoodInspection
 //
-//  Created by Colin Iglehart on 5/1/17.
+//  Created by Shane Bishop on 5/5/17.
 //  Copyright © 2017 Columbia Food Inspection Group. All rights reserved.
 //
 
@@ -20,5 +20,6 @@ extension Violations {
     @NSManaged public var criticality: String?
     @NSManaged public var violationCode: String?
     @NSManaged public var violationName: String?
+    @NSManaged public var inspection: Inspection?
 
 }

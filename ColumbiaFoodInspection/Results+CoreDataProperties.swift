@@ -2,7 +2,7 @@
 //  Results+CoreDataProperties.swift
 //  ColumbiaFoodInspection
 //
-//  Created by Colin Iglehart on 5/1/17.
+//  Created by Shane Bishop on 5/5/17.
 //  Copyright © 2017 Columbia Food Inspection Group. All rights reserved.
 //
 
@@ -18,5 +18,6 @@ extension Results {
 
     @NSManaged public var critical: Int64
     @NSManaged public var noncritical: Int64
+    @NSManaged public var inspection: Inspection?
 
 }
