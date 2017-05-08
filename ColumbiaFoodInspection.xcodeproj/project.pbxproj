@@ -7,22 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3B7434731EB7AD6300F74BC2 /* Establishment+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7434691EB7AD6300F74BC2 /* Establishment+CoreDataClass.swift */; };
-		3B7434741EB7AD6300F74BC2 /* Establishment+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B74346A1EB7AD6300F74BC2 /* Establishment+CoreDataProperties.swift */; };
-		3B7434751EB7AD6300F74BC2 /* Violations+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B74346B1EB7AD6300F74BC2 /* Violations+CoreDataClass.swift */; };
-		3B7434761EB7AD6300F74BC2 /* Violations+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B74346C1EB7AD6300F74BC2 /* Violations+CoreDataProperties.swift */; };
-		3B7434771EB7AD6300F74BC2 /* Results+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B74346D1EB7AD6300F74BC2 /* Results+CoreDataClass.swift */; };
-		3B7434781EB7AD6300F74BC2 /* Results+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B74346E1EB7AD6300F74BC2 /* Results+CoreDataProperties.swift */; };
-		3B7434791EB7AD6300F74BC2 /* Inspection+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B74346F1EB7AD6300F74BC2 /* Inspection+CoreDataClass.swift */; };
-		3B74347A1EB7AD6300F74BC2 /* Inspection+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7434701EB7AD6300F74BC2 /* Inspection+CoreDataProperties.swift */; };
-		3B74347B1EB7AD6300F74BC2 /* Item+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7434711EB7AD6300F74BC2 /* Item+CoreDataClass.swift */; };
-		3B74347C1EB7AD6300F74BC2 /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7434721EB7AD6300F74BC2 /* Item+CoreDataProperties.swift */; };
-		3B74347E1EB7AF0200F74BC2 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B74347D1EB7AF0200F74BC2 /* Model.swift */; };
-		5E6C5A181EB7AB61003A9342 /* LoadParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6C5A151EB7AB61003A9342 /* LoadParser.swift */; };
-		5E6C5A191EB7AB61003A9342 /* MainParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6C5A161EB7AB61003A9342 /* MainParser.swift */; };
-		5E6C5A1A1EB7AB61003A9342 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6C5A171EB7AB61003A9342 /* Test.swift */; };
+		5E3F6B891EC102AA00BF0C63 /* Establishment+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7434691EB7AD6300F74BC2 /* Establishment+CoreDataClass.swift */; };
+		5E3F6B8A1EC102AA00BF0C63 /* Establishment+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B74346A1EB7AD6300F74BC2 /* Establishment+CoreDataProperties.swift */; };
+		5E3F6B8B1EC102AA00BF0C63 /* Violations+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B74346B1EB7AD6300F74BC2 /* Violations+CoreDataClass.swift */; };
+		5E3F6B8C1EC102AA00BF0C63 /* Violations+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B74346C1EB7AD6300F74BC2 /* Violations+CoreDataProperties.swift */; };
+		5E3F6B8D1EC102AA00BF0C63 /* Results+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B74346D1EB7AD6300F74BC2 /* Results+CoreDataClass.swift */; };
+		5E3F6B8E1EC102AA00BF0C63 /* Results+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B74346E1EB7AD6300F74BC2 /* Results+CoreDataProperties.swift */; };
+		5E3F6B8F1EC102AA00BF0C63 /* Inspection+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B74346F1EB7AD6300F74BC2 /* Inspection+CoreDataClass.swift */; };
+		5E3F6B901EC102AA00BF0C63 /* Inspection+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7434701EB7AD6300F74BC2 /* Inspection+CoreDataProperties.swift */; };
+		5E3F6B911EC102AA00BF0C63 /* Item+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7434711EB7AD6300F74BC2 /* Item+CoreDataClass.swift */; };
+		5E3F6B921EC102AA00BF0C63 /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7434721EB7AD6300F74BC2 /* Item+CoreDataProperties.swift */; };
+		5E3F6B931EC102B200BF0C63 /* LoadParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6C5A151EB7AB61003A9342 /* LoadParser.swift */; };
+		5E3F6B941EC102B400BF0C63 /* MainParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6C5A161EB7AB61003A9342 /* MainParser.swift */; };
+		5E3F6B951EC102B700BF0C63 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6C5A171EB7AB61003A9342 /* Test.swift */; };
+		5E3F6B961EC102BF00BF0C63 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B74347D1EB7AF0200F74BC2 /* Model.swift */; };
+		5E3F6B971EC102C200BF0C63 /* PrimaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6C5A1F1EBCF2B8003A9342 /* PrimaryTableViewController.swift */; };
 		5E6C5A1C1EB7AB71003A9342 /* newData.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E6C5A1B1EB7AB71003A9342 /* newData.json */; };
-		5E6C5A201EBCF2B8003A9342 /* PrimaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6C5A1F1EBCF2B8003A9342 /* PrimaryTableViewController.swift */; };
 		5E6C5A221EBD088F003A9342 /* EstablishmentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6C5A211EBD088F003A9342 /* EstablishmentDetailViewController.swift */; };
 		B43CC1B51EA5215E00E120F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43CC1B41EA5215E00E120F5 /* AppDelegate.swift */; };
 		B43CC1BA1EA5215E00E120F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B43CC1B81EA5215E00E120F5 /* Main.storyboard */; };
@@ -191,14 +191,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E3F6B921EC102AA00BF0C63 /* Item+CoreDataProperties.swift in Sources */,
+				5E3F6B8E1EC102AA00BF0C63 /* Results+CoreDataProperties.swift in Sources */,
 				B43CC1BD1EA5215E00E120F5 /* ColumbiaFoodInspection.xcdatamodeld in Sources */,
+				5E3F6B8C1EC102AA00BF0C63 /* Violations+CoreDataProperties.swift in Sources */,
+				5E3F6B951EC102B700BF0C63 /* Test.swift in Sources */,
 				B48228DF1EBD094B005B014F /* ButtonChange.swift in Sources */,
+				5E3F6B971EC102C200BF0C63 /* PrimaryTableViewController.swift in Sources */,
+				5E3F6B911EC102AA00BF0C63 /* Item+CoreDataClass.swift in Sources */,
+				5E3F6B891EC102AA00BF0C63 /* Establishment+CoreDataClass.swift in Sources */,
+				5E3F6B8D1EC102AA00BF0C63 /* Results+CoreDataClass.swift in Sources */,
+				5E3F6B961EC102BF00BF0C63 /* Model.swift in Sources */,
+				5E3F6B8A1EC102AA00BF0C63 /* Establishment+CoreDataProperties.swift in Sources */,
 				B43CC1B51EA5215E00E120F5 /* AppDelegate.swift in Sources */,
-				3B7434791EB7AD6300F74BC2 /* Inspection+CoreDataClass.swift in Sources */,
-				3B7434771EB7AD6300F74BC2 /* Results+CoreDataClass.swift in Sources */,
-				3B74347A1EB7AD6300F74BC2 /* Inspection+CoreDataProperties.swift in Sources */,
-				3B7434741EB7AD6300F74BC2 /* Establishment+CoreDataProperties.swift in Sources */,
 				5E6C5A221EBD088F003A9342 /* EstablishmentDetailViewController.swift in Sources */,
+				5E3F6B901EC102AA00BF0C63 /* Inspection+CoreDataProperties.swift in Sources */,
+				5E3F6B8F1EC102AA00BF0C63 /* Inspection+CoreDataClass.swift in Sources */,
+				5E3F6B941EC102B400BF0C63 /* MainParser.swift in Sources */,
+				5E3F6B931EC102B200BF0C63 /* LoadParser.swift in Sources */,
+				5E3F6B8B1EC102AA00BF0C63 /* Violations+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +334,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = ColumbiaFoodInspection/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.missouri.cs.ColumbiaFoodInspection;
@@ -335,6 +347,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = ColumbiaFoodInspection/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.missouri.cs.ColumbiaFoodInspection;

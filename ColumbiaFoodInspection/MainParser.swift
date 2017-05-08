@@ -59,7 +59,7 @@ class MainJSONParser {
                                 let criticality = violations["criticality"] as? String
                                 
                                 violation = Violations(comments: comments, violationCode: violationCode, violationName: violationName, criticality: criticality)
-                                inspect = Inspection(date: date, type: type, comments: comments, results: result, violations: violation)!
+                                inspect = Inspection(date: date, type: type, comments: comments, results: result, violations: violation)
                             }
                             
                         }
