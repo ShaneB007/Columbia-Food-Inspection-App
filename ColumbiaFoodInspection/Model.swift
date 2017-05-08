@@ -29,6 +29,8 @@ class Model {
         
         let items = JSONLoader.load(fileName: "newData")
         
+        
+        
        /* for newsCategory in newsCategories {
             // TODO: - Parse categories
         } */
@@ -37,9 +39,26 @@ class Model {
             try self.managedContext?.save()
             
             UserDefaults.standard.set(true, forKey: coreDataLoadedKey)
+            
         } catch {
             return
         }
+    }
+    
+    func fetchCategories() -> [Item] {
+        do {
+            let array = try managedContext?.fetch(Item.fetchRequest()) ?? []
+            return array
+        } catch {
+            return []
+        }
+    }
+    
+    func saveContext() {
+        guard let context = managedContext,
+        context.hasChanges else { return }
+        
+        try? context.save()
     }
     
 }

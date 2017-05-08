@@ -14,25 +14,25 @@ class MainJSONParser {
     
     class func parse(_ data: Data) -> [Item] {
         var itemArray = [Item]()
+        let status = "ok"
         
         if let json = try? JSONSerialization.jsonObject(with: data, options: []),
             let root = json as? [String: Any],
-            let status = root["status"] as? String,
-            status == "ok" {
-            if let items = root["items"] as? [Any] {
+             status == "ok"{
+            if let items = root["item"] as? [Any] {
                 for item in items {
-                    var fullItem = Item()
+                   // let fullItem = Item()
                     var violation = Violations()
                     var result = Results()
+                    var establish = Establishment()
+                    var inspect = Inspection()
                     if let item = item as? [String: Any] {
                         if let establishment = item["establishment"] as? [String: Any] {
                              let name = establishment["name"] as? String
                              let address = establishment["address"] as? String
                             let type = establishment["type"] as? String
                             
-                            if let establish = Establishment(name: name, address: address, type: type) {
-                               fullItem.establishment = establish
-                            }
+                            establish = Establishment(name: name, address: address, type: type)!
 
                         }
                         
@@ -41,8 +41,8 @@ class MainJSONParser {
                                 
                                 let critical = results["critical"] as? Int64
                                 let noncritical = results["noncritical"] as? Int64
-                                result.critical = critical!
-                                result.noncritical = noncritical!
+                                
+                                result = Results(critical: critical!, noncritical: noncritical!)!
                                 
 
                             }
@@ -55,20 +55,14 @@ class MainJSONParser {
                                 let violationName = violations["violationName"] as? String
                                 let violationCode = violations["violationCode"] as? String
                                 let criticality = violations["criticality"] as? String
-                                violation.comments = comments
-                                violation.violationName = violationName
-                                violation.violationCode = violationCode
-                                violation.criticality = criticality
-                            }
-                            if let inspect = Inspection(date: date, type: type, comments: comments, results: result, violations: violation) {
-                                fullItem.inspection = inspect
-                            }
+                                 violation = Violations(comments: comments, violationCode: violationCode, violationName: violationName, criticality: criticality)!                           }
+                             inspect = Inspection(date: date, type: type, comments: comments, results: result, violations: violation)!
                         }
                         
                        
                     
-                        
-                            itemArray.append(fullItem)
+                        var fullItem = Item(establishment: establish, inspection: inspect)
+                            itemArray.append(fullItem!)
                         
                         
                         
@@ -82,6 +76,7 @@ class MainJSONParser {
                 }
                 
             }
+        print(itemArray[1])
             return itemArray
         }
 

@@ -11,7 +11,7 @@ import CoreData
 
 @objc(Violations)
 public class Violations: NSManagedObject {
-    convenience init?(comments:String?, violationCode:String?, violationName:String?, criticality:String?) {
+    convenience init?(comments: String?, violationCode: String?, violationName: String?, criticality: String?) {
         guard let context = Model.sharedInstance.managedContext else { return nil }
         self.init(entity: Violations.entity(),insertInto: context)
         self.comments = comments

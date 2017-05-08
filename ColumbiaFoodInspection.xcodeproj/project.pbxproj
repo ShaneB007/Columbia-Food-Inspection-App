@@ -22,6 +22,8 @@
 		5E6C5A191EB7AB61003A9342 /* MainParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6C5A161EB7AB61003A9342 /* MainParser.swift */; };
 		5E6C5A1A1EB7AB61003A9342 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6C5A171EB7AB61003A9342 /* Test.swift */; };
 		5E6C5A1C1EB7AB71003A9342 /* newData.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E6C5A1B1EB7AB71003A9342 /* newData.json */; };
+		5E6C5A201EBCF2B8003A9342 /* PrimaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6C5A1F1EBCF2B8003A9342 /* PrimaryTableViewController.swift */; };
+		5E6C5A221EBD088F003A9342 /* EstablishmentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6C5A211EBD088F003A9342 /* EstablishmentDetailViewController.swift */; };
 		B43CC1B51EA5215E00E120F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43CC1B41EA5215E00E120F5 /* AppDelegate.swift */; };
 		B43CC1BA1EA5215E00E120F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B43CC1B81EA5215E00E120F5 /* Main.storyboard */; };
 		B43CC1BD1EA5215E00E120F5 /* ColumbiaFoodInspection.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B43CC1BB1EA5215E00E120F5 /* ColumbiaFoodInspection.xcdatamodeld */; };
@@ -45,6 +47,8 @@
 		5E6C5A161EB7AB61003A9342 /* MainParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainParser.swift; sourceTree = "<group>"; };
 		5E6C5A171EB7AB61003A9342 /* Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		5E6C5A1B1EB7AB71003A9342 /* newData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = newData.json; sourceTree = "<group>"; };
+		5E6C5A1F1EBCF2B8003A9342 /* PrimaryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimaryTableViewController.swift; sourceTree = "<group>"; };
+		5E6C5A211EBD088F003A9342 /* EstablishmentDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EstablishmentDetailViewController.swift; sourceTree = "<group>"; };
 		B43CC1B11EA5215E00E120F5 /* ColumbiaFoodInspection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColumbiaFoodInspection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B43CC1B41EA5215E00E120F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B43CC1B91EA5215E00E120F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -105,6 +109,8 @@
 				B43CC1C31EA5215E00E120F5 /* Info.plist */,
 				B43CC1BB1EA5215E00E120F5 /* ColumbiaFoodInspection.xcdatamodeld */,
 				3B74347D1EB7AF0200F74BC2 /* Model.swift */,
+				5E6C5A1F1EBCF2B8003A9342 /* PrimaryTableViewController.swift */,
+				5E6C5A211EBD088F003A9342 /* EstablishmentDetailViewController.swift */,
 			);
 			path = ColumbiaFoodInspection;
 			sourceTree = "<group>";
@@ -192,12 +198,14 @@
 				3B74347E1EB7AF0200F74BC2 /* Model.swift in Sources */,
 				3B7434751EB7AD6300F74BC2 /* Violations+CoreDataClass.swift in Sources */,
 				3B7434761EB7AD6300F74BC2 /* Violations+CoreDataProperties.swift in Sources */,
+				5E6C5A201EBCF2B8003A9342 /* PrimaryTableViewController.swift in Sources */,
 				3B74347C1EB7AD6300F74BC2 /* Item+CoreDataProperties.swift in Sources */,
 				B43CC1B51EA5215E00E120F5 /* AppDelegate.swift in Sources */,
 				3B7434791EB7AD6300F74BC2 /* Inspection+CoreDataClass.swift in Sources */,
 				3B7434771EB7AD6300F74BC2 /* Results+CoreDataClass.swift in Sources */,
 				3B74347A1EB7AD6300F74BC2 /* Inspection+CoreDataProperties.swift in Sources */,
 				3B7434741EB7AD6300F74BC2 /* Establishment+CoreDataProperties.swift in Sources */,
+				5E6C5A221EBD088F003A9342 /* EstablishmentDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
