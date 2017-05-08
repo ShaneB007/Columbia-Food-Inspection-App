@@ -12,6 +12,7 @@
 		B43CC1BD1EA5215E00E120F5 /* ColumbiaFoodInspection.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B43CC1BB1EA5215E00E120F5 /* ColumbiaFoodInspection.xcdatamodeld */; };
 		B43CC1BF1EA5215E00E120F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B43CC1BE1EA5215E00E120F5 /* Assets.xcassets */; };
 		B43CC1C21EA5215E00E120F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B43CC1C01EA5215E00E120F5 /* LaunchScreen.storyboard */; };
+		B48228DF1EBD094B005B014F /* ButtonChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48228DE1EBD094B005B014F /* ButtonChange.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		B43CC1BE1EA5215E00E120F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B43CC1C11EA5215E00E120F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B43CC1C31EA5215E00E120F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B48228DE1EBD094B005B014F /* ButtonChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonChange.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				B43CC1B41EA5215E00E120F5 /* AppDelegate.swift */,
 				B43CC1B81EA5215E00E120F5 /* Main.storyboard */,
 				B43CC1BE1EA5215E00E120F5 /* Assets.xcassets */,
+				B48228DE1EBD094B005B014F /* ButtonChange.swift */,
 				B43CC1C01EA5215E00E120F5 /* LaunchScreen.storyboard */,
 				B43CC1C31EA5215E00E120F5 /* Info.plist */,
 				B43CC1BB1EA5215E00E120F5 /* ColumbiaFoodInspection.xcdatamodeld */,
@@ -137,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B43CC1BD1EA5215E00E120F5 /* ColumbiaFoodInspection.xcdatamodeld in Sources */,
+				B48228DF1EBD094B005B014F /* ButtonChange.swift in Sources */,
 				B43CC1B51EA5215E00E120F5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,6 +305,7 @@
 				B43CC1C81EA5215E00E120F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

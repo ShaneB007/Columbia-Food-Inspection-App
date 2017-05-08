@@ -129,42 +129,41 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hr8-Vb-VGo">
-                                <rect key="frame" x="293" y="50" width="37" height="36"/>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Uq-7e-geq" customClass="FavoriteButton" customModule="ColumbiaFoodInspection" customModuleProvider="target">
+                                <rect key="frame" x="290" y="50" width="53" height="50"/>
+                                <state key="normal" title="Favorite it!" image="Star-50"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="9kJ-pM-1gO" firstAttribute="top" secondItem="hr8-Vb-VGo" secondAttribute="bottom" constant="94" id="2Pm-pQ-YGg"/>
                             <constraint firstAttribute="leadingMargin" secondItem="7HE-1s-uo8" secondAttribute="leading" id="2mp-UK-mR1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="CdH-GT-nGu" secondAttribute="trailing" id="6gS-K0-Yla"/>
                             <constraint firstItem="EfW-iG-2Ld" firstAttribute="top" secondItem="UcH-2d-B7z" secondAttribute="bottom" constant="33" id="Hjz-Rj-byx"/>
-                            <constraint firstItem="hr8-Vb-VGo" firstAttribute="top" secondItem="adj-av-7tj" secondAttribute="bottom" constant="30" id="J3V-uH-nCM"/>
+                            <constraint firstItem="9Uq-7e-geq" firstAttribute="leading" secondItem="UcH-2d-B7z" secondAttribute="trailing" constant="121" id="ITI-jd-zZm"/>
                             <constraint firstItem="ZER-Is-CI0" firstAttribute="top" secondItem="9kJ-pM-1gO" secondAttribute="bottom" constant="233" id="LYB-In-1ny"/>
                             <constraint firstItem="xmf-ry-oQq" firstAttribute="top" secondItem="9kJ-pM-1gO" secondAttribute="bottom" constant="24" id="LdJ-5M-5t6"/>
                             <constraint firstItem="ZER-Is-CI0" firstAttribute="top" secondItem="CdH-GT-nGu" secondAttribute="bottom" constant="71" id="NEi-ey-vJk"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9kJ-pM-1gO" secondAttribute="trailing" id="T2X-mk-Ypn"/>
                             <constraint firstItem="7HE-1s-uo8" firstAttribute="top" secondItem="adj-av-7tj" secondAttribute="bottom" constant="30" id="UOG-2L-78g"/>
-                            <constraint firstItem="hr8-Vb-VGo" firstAttribute="leading" secondItem="UcH-2d-B7z" secondAttribute="trailing" constant="124" id="UtI-Xg-iW2"/>
                             <constraint firstItem="EfW-iG-2Ld" firstAttribute="leading" secondItem="7HE-1s-uo8" secondAttribute="trailing" constant="8" id="V8B-Mj-hSc"/>
                             <constraint firstItem="CdH-GT-nGu" firstAttribute="leading" secondItem="xmf-ry-oQq" secondAttribute="leading" id="Wty-aX-vot"/>
                             <constraint firstItem="UcH-2d-B7z" firstAttribute="leading" secondItem="7HE-1s-uo8" secondAttribute="trailing" constant="8" id="ZSA-wU-5od"/>
                             <constraint firstItem="9kJ-pM-1gO" firstAttribute="top" secondItem="adj-av-7tj" secondAttribute="bottom" constant="160" id="aAJ-eb-Gz3"/>
                             <constraint firstItem="ZER-Is-CI0" firstAttribute="top" secondItem="7HE-1s-uo8" secondAttribute="bottom" constant="529" id="aX6-wM-7PH"/>
+                            <constraint firstItem="9Uq-7e-geq" firstAttribute="width" secondItem="aBs-dM-1Fh" secondAttribute="height" multiplier="53:667" id="d4u-WC-gqL"/>
                             <constraint firstItem="7HE-1s-uo8" firstAttribute="width" secondItem="aBs-dM-1Fh" secondAttribute="height" multiplier="100:667" id="e1x-DD-VHB"/>
                             <constraint firstAttribute="leadingMargin" secondItem="CdH-GT-nGu" secondAttribute="leading" id="fFn-G8-h84"/>
-                            <constraint firstItem="hr8-Vb-VGo" firstAttribute="width" secondItem="aBs-dM-1Fh" secondAttribute="height" multiplier="37:667" id="giV-My-vd5"/>
+                            <constraint firstItem="9Uq-7e-geq" firstAttribute="top" secondItem="adj-av-7tj" secondAttribute="bottom" constant="30" id="hzc-Eb-q6W"/>
                             <constraint firstItem="UcH-2d-B7z" firstAttribute="top" secondItem="adj-av-7tj" secondAttribute="bottom" constant="43" id="on3-UF-XE8"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7HE-1s-uo8" secondAttribute="trailing" constant="243" id="p4F-HF-meh"/>
                             <constraint firstAttribute="leadingMargin" secondItem="9kJ-pM-1gO" secondAttribute="leading" id="qJq-y7-9gk"/>
                             <constraint firstAttribute="leadingMargin" secondItem="xmf-ry-oQq" secondAttribute="leading" id="rXR-ic-Ye2"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="hr8-Vb-VGo" secondAttribute="trailing" constant="29" id="tYb-bV-ei8"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iad-Vx-06P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2932" y="2786"/>
+            <point key="canvasLocation" x="-2932" y="2785.4572713643179"/>
         </scene>
         <!--Information Page-->
         <scene sceneID="urZ-Up-8wm">
@@ -205,7 +204,6 @@
         <!--Map View-->
         <scene sceneID="2Ji-c8-2KE">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WwQ-hf-KXd" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Map View" id="c6B-uU-6fI" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="61e-u3-OoL"/>
@@ -231,6 +229,7 @@
                     <navigationItem key="navigationItem" id="oSh-RF-TLn"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WwQ-hf-KXd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1855" y="1941"/>
         </scene>
@@ -356,7 +355,7 @@
         <!--Favorite Detailed View-->
         <scene sceneID="RsC-8S-Msv">
             <objects>
-                <viewController title="Favorite Detailed View" id="gIg-8z-iTJ" sceneMemberID="viewController">
+                <viewController title="Favorite Detailed View" id="gIg-8z-iTJ" customClass="ButtonChange" customModule="ColumbiaFoodInspection" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UI1-gt-QFA"/>
                         <viewControllerLayoutGuide type="bottom" id="iIB-D7-KlZ"/>
@@ -411,9 +410,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3lA-ac-CZi">
-                                <rect key="frame" x="293" y="50" width="37" height="36"/>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zCE-BE-hHo" customClass="FavoriteButton" customModule="ColumbiaFoodInspection" customModuleProvider="target">
+                                <rect key="frame" x="298" y="50" width="44" height="50"/>
+                                <state key="normal" title="Favorite it!" image="Star Filled-50"/>
+                                <state key="selected" title="Favorited!"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -421,21 +422,19 @@
                             <constraint firstAttribute="leadingMargin" secondItem="uG5-EE-EDh" secondAttribute="leading" id="2OE-WT-2gN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="uG5-EE-EDh" secondAttribute="trailing" id="2TG-TM-NAh"/>
                             <constraint firstItem="hjg-Ow-A5Z" firstAttribute="leading" secondItem="SM1-18-4hF" secondAttribute="trailing" constant="8" id="2pI-L3-T3a"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="3lA-ac-CZi" secondAttribute="trailing" constant="29" id="3H1-lB-83n"/>
                             <constraint firstItem="hjg-Ow-A5Z" firstAttribute="top" secondItem="UI1-gt-QFA" secondAttribute="bottom" constant="43" id="AUk-Ih-biD"/>
                             <constraint firstAttribute="leadingMargin" secondItem="o2v-WU-ZdV" secondAttribute="leading" id="IFa-OI-w0U"/>
                             <constraint firstItem="SM1-18-4hF" firstAttribute="top" secondItem="UI1-gt-QFA" secondAttribute="bottom" constant="30" id="IUH-Ue-n4A"/>
                             <constraint firstItem="624-as-HC4" firstAttribute="top" secondItem="UI1-gt-QFA" secondAttribute="bottom" constant="160" id="Ilh-VX-z7x"/>
                             <constraint firstItem="o2v-WU-ZdV" firstAttribute="top" secondItem="624-as-HC4" secondAttribute="bottom" constant="24" id="QGR-ug-LjY"/>
-                            <constraint firstItem="3lA-ac-CZi" firstAttribute="leading" secondItem="hjg-Ow-A5Z" secondAttribute="trailing" constant="124" id="S7R-mb-bpF"/>
                             <constraint firstItem="SM1-18-4hF" firstAttribute="width" secondItem="B20-VZ-x2l" secondAttribute="height" multiplier="100:667" id="SL0-iT-arN"/>
+                            <constraint firstItem="zCE-BE-hHo" firstAttribute="leading" secondItem="hjg-Ow-A5Z" secondAttribute="trailing" constant="129" id="UfO-V2-k6e"/>
                             <constraint firstAttribute="trailingMargin" secondItem="SM1-18-4hF" secondAttribute="trailing" constant="243" id="Vbe-8Z-noI"/>
-                            <constraint firstItem="3lA-ac-CZi" firstAttribute="top" secondItem="UI1-gt-QFA" secondAttribute="bottom" constant="30" id="X2H-qg-Agt"/>
                             <constraint firstAttribute="leadingMargin" secondItem="SM1-18-4hF" secondAttribute="leading" id="XdM-fe-6ld"/>
                             <constraint firstItem="2Y9-IT-kWf" firstAttribute="leading" secondItem="SM1-18-4hF" secondAttribute="trailing" constant="8" id="Yhi-K0-tAF"/>
-                            <constraint firstItem="624-as-HC4" firstAttribute="top" secondItem="3lA-ac-CZi" secondAttribute="bottom" constant="94" id="aq7-hf-kb7"/>
+                            <constraint firstItem="zCE-BE-hHo" firstAttribute="top" secondItem="UI1-gt-QFA" secondAttribute="bottom" constant="30" id="eDj-qH-mRd"/>
                             <constraint firstItem="iIB-D7-KlZ" firstAttribute="top" secondItem="624-as-HC4" secondAttribute="bottom" constant="233" id="gVc-32-hMn"/>
-                            <constraint firstItem="3lA-ac-CZi" firstAttribute="width" secondItem="B20-VZ-x2l" secondAttribute="height" multiplier="37:667" id="jXP-hJ-s8w"/>
+                            <constraint firstItem="zCE-BE-hHo" firstAttribute="width" secondItem="B20-VZ-x2l" secondAttribute="height" multiplier="44:667" id="haz-zF-qYG"/>
                             <constraint firstItem="iIB-D7-KlZ" firstAttribute="top" secondItem="SM1-18-4hF" secondAttribute="bottom" constant="529" id="nh0-nY-ULK"/>
                             <constraint firstItem="2Y9-IT-kWf" firstAttribute="top" secondItem="hjg-Ow-A5Z" secondAttribute="bottom" constant="33" id="ol4-Jt-rHs"/>
                             <constraint firstItem="iIB-D7-KlZ" firstAttribute="top" secondItem="uG5-EE-EDh" secondAttribute="bottom" constant="71" id="qlO-zX-bwW"/>
@@ -443,10 +442,17 @@
                             <constraint firstAttribute="trailingMargin" secondItem="624-as-HC4" secondAttribute="trailing" id="tmO-sv-hDs"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="favoriteButton" destination="zCE-BE-hHo" id="MIP-xQ-Jrf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gzt-bJ-hj5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-669" y="1941"/>
+            <point key="canvasLocation" x="-669.60000000000002" y="1940.7796101949027"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Star Filled-50" width="50" height="50"/>
+        <image name="Star-50" width="50" height="50"/>
+    </resources>
 </document>
