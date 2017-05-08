@@ -13,6 +13,7 @@ class ButtonChange: UIViewController {
     
     @IBOutlet weak var favoriteButton: UIButton!
     
+    @IBOutlet weak var favoriteButton2: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +30,9 @@ class ButtonChange: UIViewController {
         
         favoriteButton.setImage(UIImage?( #imageLiteral(resourceName: "Star-50")), for: .normal)
         favoriteButton.setImage(UIImage?(#imageLiteral(resourceName: "Star Filled-50")), for: .selected)
+        
+        favoriteButton2.setImage(UIImage?( #imageLiteral(resourceName: "Star-50")), for: .normal)
+        favoriteButton2.setImage(UIImage?(#imageLiteral(resourceName: "Star Filled-50")), for: .selected)
     }
     
     

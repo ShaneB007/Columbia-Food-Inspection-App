@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8za-hY-AIj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8za-hY-AIj">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -74,7 +74,7 @@
         <!--Establishment Detailed View-->
         <scene sceneID="vxe-sg-hqR">
             <objects>
-                <viewController title="Establishment Detailed View" id="8xi-Ri-Mwk" sceneMemberID="viewController">
+                <viewController title="Establishment Detailed View" id="8xi-Ri-Mwk" customClass="ButtonChange" customModule="ColumbiaFoodInspection" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="adj-av-7tj"/>
                         <viewControllerLayoutGuide type="bottom" id="ZER-Is-CI0"/>
@@ -129,7 +129,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Uq-7e-geq" customClass="FavoriteButton" customModule="ColumbiaFoodInspection" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Uq-7e-geq" customClass="FavoriteButton2" customModule="ColumbiaFoodInspection" customModuleProvider="target">
                                 <rect key="frame" x="290" y="50" width="53" height="50"/>
                                 <state key="normal" title="Favorite it!" image="Star-50"/>
                             </button>
@@ -160,6 +160,9 @@
                             <constraint firstAttribute="leadingMargin" secondItem="xmf-ry-oQq" secondAttribute="leading" id="rXR-ic-Ye2"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="favoriteButton2" destination="9Uq-7e-geq" id="RGd-I5-Lml"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iad-Vx-06P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
