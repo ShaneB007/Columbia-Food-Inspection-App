@@ -23,11 +23,6 @@ class ButtonChange: UIViewController {
         //Create New Button
        
         //set image for Button
-        //let starEmpty = UIImage(named: #imageLiteral(resourceName: "Star-50")) as UIImage!
-        //let starFull = UIImage(named: #imageLiteral(resourceName: "Star Filled-50")) as UIImage!
-        //self.favoriteButton.setImage(starEmpty, for: UIControlState.normal)
-        //self.favoriteButton.setImage(starFull, for: UIControlState.selected)
-        
         favoriteButton.setImage(UIImage?( #imageLiteral(resourceName: "Star-50")), for: .normal)
         favoriteButton.setImage(UIImage?(#imageLiteral(resourceName: "Star Filled-50")), for: .selected)
         
