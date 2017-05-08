@@ -1,4 +1,41 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16E195" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Establishment" representedClassName="Establishment" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="item" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Item" inverseName="establishment" inverseEntity="Item" syncable="YES"/>
+    </entity>
+    <entity name="Inspection" representedClassName="Inspection" syncable="YES">
+        <attribute name="comments" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="item" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Item" inverseName="inspection" inverseEntity="Item" syncable="YES"/>
+        <relationship name="results" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Results" inverseName="inspection" inverseEntity="Results" syncable="YES"/>
+        <relationship name="violations" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Violations" inverseName="inspection" inverseEntity="Violations" syncable="YES"/>
+    </entity>
+    <entity name="Item" representedClassName="Item" syncable="YES">
+        <attribute name="favorite" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="establishment" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Establishment" inverseName="item" inverseEntity="Establishment" syncable="YES"/>
+        <relationship name="inspection" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Inspection" inverseName="item" inverseEntity="Inspection" syncable="YES"/>
+    </entity>
+    <entity name="Results" representedClassName="Results" syncable="YES">
+        <attribute name="critical" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="noncritical" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="inspection" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Inspection" inverseName="results" inverseEntity="Inspection" syncable="YES"/>
+    </entity>
+    <entity name="Violations" representedClassName="Violations" syncable="YES">
+        <attribute name="comments" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="criticality" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="violationCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="violationName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="inspection" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Inspection" inverseName="violations" inverseEntity="Inspection" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Establishment" positionX="133" positionY="-81" width="128" height="105"/>
+        <element name="Inspection" positionX="-342" positionY="-63" width="128" height="135"/>
+        <element name="Item" positionX="-20" positionY="-228" width="128" height="90"/>
+        <element name="Results" positionX="-369" positionY="216" width="128" height="90"/>
+        <element name="Violations" positionX="0" positionY="81" width="128" height="120"/>
+    </elements>
 </model>
