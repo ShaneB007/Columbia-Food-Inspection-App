@@ -11,8 +11,8 @@ import CoreData
 
 @objc(Item)
 public class Item: NSManagedObject {
-    convenience init?(establishment: Establishment?, inspection: Inspection?) {
-        guard let context = Model.sharedInstance.managedContext else { return nil }
+    convenience init(establishment: Establishment?, inspection: Inspection?) {
+        let context = Model.sharedInstance.managedContext
         self.init(entity: Item.entity(),insertInto: context)
         self.establishment = establishment
         self.inspection = inspection

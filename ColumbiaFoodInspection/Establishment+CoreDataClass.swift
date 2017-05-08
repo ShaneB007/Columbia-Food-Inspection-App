@@ -11,8 +11,8 @@ import CoreData
 
 @objc(Establishment)
 public class Establishment: NSManagedObject {
-    convenience init?(name: String?, address: String?, type: String?) {
-        guard let context = Model.sharedInstance.managedContext else { return nil }
+    convenience init(name: String?, address: String?, type: String?) {
+        let context = Model.sharedInstance.managedContext
         self.init(entity: Establishment.entity(),insertInto: context)
         self.name = name
         self.address = address

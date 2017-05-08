@@ -11,13 +11,13 @@ import CoreData
 
 @objc(Violations)
 public class Violations: NSManagedObject {
-    convenience init?(comments: String?, violationCode: String?, violationName: String?, criticality: String?) {
-        guard let context = Model.sharedInstance.managedContext else { return nil }
+    
+    convenience init(comments: String?, violationCode: String?, violationName: String?, criticality: String?) {
+        let context = Model.sharedInstance.managedContext
         self.init(entity: Violations.entity(),insertInto: context)
         self.comments = comments
         self.violationCode = violationCode
         self.violationName = violationName
         self.criticality = criticality
     }
-  
 }

@@ -11,14 +11,12 @@ import UIKit
 import CoreData
 
 class Model {
-    var managedContext: NSManagedObjectContext?
+    var managedContext: NSManagedObjectContext
     
     static var sharedInstance: Model = Model()
     
     init(){
-        let appDelegate = UIApplication.shared.delegate as? AppDelegate
-        let persistentContainer = appDelegate?.persistentContainer
-        managedContext = persistentContainer?.viewContext
+        managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     }
     
     
@@ -36,7 +34,7 @@ class Model {
         } */
         
         do {
-            try self.managedContext?.save()
+            try self.managedContext.save()
             
             UserDefaults.standard.set(true, forKey: coreDataLoadedKey)
             
@@ -46,19 +44,14 @@ class Model {
     }
     
     func fetchCategories() -> [Item] {
-        do {
-            let array = try managedContext?.fetch(Item.fetchRequest()) ?? []
-            return array
-        } catch {
-            return []
-        }
+            return try! managedContext.fetch(Item.fetchRequest()) as! [Item]
     }
     
     func saveContext() {
-        guard let context = managedContext,
-        context.hasChanges else { return }
         
-        try? context.save()
+        guard managedContext.hasChanges else { return }
+        
+        try? managedContext.save()
     }
     
 }

@@ -11,8 +11,8 @@ import CoreData
 
 @objc(Inspection)
 public class Inspection: NSManagedObject {
-    convenience init?(date: String?, type: String?, comments: String?, results: Results, violations: Violations) {
-        guard let context = Model.sharedInstance.managedContext else { return nil }
+    convenience init?(date: String?, type: String?, comments: String?, results: Results?, violations: Violations?) {
+        let context = Model.sharedInstance.managedContext
         self.init(entity: Inspection.entity(),insertInto: context)
         self.date = date
         self.type = type

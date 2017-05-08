@@ -11,8 +11,8 @@ import CoreData
 
 @objc(Results)
 public class Results: NSManagedObject {
-    convenience init?(critical: Int64, noncritical: Int64) {
-        guard let context = Model.sharedInstance.managedContext else { return nil }
+    convenience init(critical: Int64, noncritical: Int64) {
+        let context = Model.sharedInstance.managedContext
         self.init(entity: Results.entity(),insertInto: context)
         self.critical = critical
         self.noncritical = noncritical
