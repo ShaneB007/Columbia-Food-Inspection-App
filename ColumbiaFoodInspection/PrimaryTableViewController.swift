@@ -67,7 +67,7 @@ class PrimaryTableViewController: UITableViewController,  UISearchResultsUpdatin
         cell.detailTextLabel?.text = fillteredItems[indexPath.row].inspection?.violations?.criticality!
         
         
-        print(items[indexPath.row].inspection?.results?.critical, items[indexPath.row].inspection?.results?.noncritical)
+        //print(items[indexPath.row].inspection?.results?.critical, items[indexPath.row].inspection?.results?.noncritical)
         
         if let crit = items[indexPath.row].inspection?.results?.critical{
             switch crit{
