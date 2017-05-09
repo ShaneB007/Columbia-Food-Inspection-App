@@ -207,7 +207,7 @@
         <!--Map View-->
         <scene sceneID="2Ji-c8-2KE">
             <objects>
-                <viewController title="Map View" id="c6B-uU-6fI" sceneMemberID="viewController">
+                <viewController title="Map View" id="c6B-uU-6fI" customClass="searchMapViewController" customModule="ColumbiaFoodInspection" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="61e-u3-OoL"/>
                         <viewControllerLayoutGuide type="bottom" id="Uia-E5-C76"/>
@@ -231,6 +231,9 @@
                     <tabBarItem key="tabBarItem" systemItem="search" id="Wqf-vb-xa4"/>
                     <navigationItem key="navigationItem" id="oSh-RF-TLn"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="mapView" destination="G2D-d6-xpE" id="VUU-dH-qy3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WwQ-hf-KXd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
