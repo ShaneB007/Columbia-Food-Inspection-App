@@ -12,18 +12,20 @@ class EstablishmentDetailViewController: UIViewController {
     
     @IBOutlet weak var restaurantName: UILabel!
     @IBOutlet weak var restaurantAddress: UILabel!
-    @IBOutlet weak var numberViolations: UILabel!
+    @IBOutlet weak var numbercritViolations: UILabel!
     @IBOutlet weak var violationInfo: UILabel!
-    
+
     var item: Item?
 
     override func viewDidLoad() {
         super.viewDidLoad()
             restaurantName.text = item?.establishment?.name
             restaurantAddress.text = item?.establishment?.address
+            restaurantAddress.sizeToFit()
         let x = item?.inspection?.results?.critical
-         let criticalViolations = String(describing: x)
-        numberViolations.text! = criticalViolations
+         let criticalViolations = String(describing: x!)
+        
+        numbercritViolations.text = (("Critical Violations: ") + criticalViolations)
         
            violationInfo.text = item?.inspection?.comments
 
