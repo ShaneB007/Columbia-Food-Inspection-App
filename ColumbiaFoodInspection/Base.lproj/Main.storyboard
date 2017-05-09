@@ -74,7 +74,7 @@
         <!--Establishment Detailed View-->
         <scene sceneID="vxe-sg-hqR">
             <objects>
-                <viewController title="Establishment Detailed View" id="8xi-Ri-Mwk" customClass="ButtonChange" customModule="ColumbiaFoodInspection" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Establishment Detailed View" id="8xi-Ri-Mwk" customClass="EstablishmentDetailViewController" customModule="ColumbiaFoodInspection" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="adj-av-7tj"/>
                         <viewControllerLayoutGuide type="bottom" id="ZER-Is-CI0"/>
@@ -123,45 +123,32 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Violation Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xmf-ry-oQq">
-                                <rect key="frame" x="16" y="458" width="104" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Uq-7e-geq" customClass="FavoriteButton2" customModule="ColumbiaFoodInspection" customModuleProvider="target">
-                                <rect key="frame" x="290" y="50" width="53" height="50"/>
-                                <state key="normal" title="Favorite it!" image="Star-50"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="leadingMargin" secondItem="7HE-1s-uo8" secondAttribute="leading" id="2mp-UK-mR1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="CdH-GT-nGu" secondAttribute="trailing" id="6gS-K0-Yla"/>
                             <constraint firstItem="EfW-iG-2Ld" firstAttribute="top" secondItem="UcH-2d-B7z" secondAttribute="bottom" constant="33" id="Hjz-Rj-byx"/>
-                            <constraint firstItem="9Uq-7e-geq" firstAttribute="leading" secondItem="UcH-2d-B7z" secondAttribute="trailing" constant="121" id="ITI-jd-zZm"/>
                             <constraint firstItem="ZER-Is-CI0" firstAttribute="top" secondItem="9kJ-pM-1gO" secondAttribute="bottom" constant="233" id="LYB-In-1ny"/>
-                            <constraint firstItem="xmf-ry-oQq" firstAttribute="top" secondItem="9kJ-pM-1gO" secondAttribute="bottom" constant="24" id="LdJ-5M-5t6"/>
                             <constraint firstItem="ZER-Is-CI0" firstAttribute="top" secondItem="CdH-GT-nGu" secondAttribute="bottom" constant="71" id="NEi-ey-vJk"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9kJ-pM-1gO" secondAttribute="trailing" id="T2X-mk-Ypn"/>
                             <constraint firstItem="7HE-1s-uo8" firstAttribute="top" secondItem="adj-av-7tj" secondAttribute="bottom" constant="30" id="UOG-2L-78g"/>
                             <constraint firstItem="EfW-iG-2Ld" firstAttribute="leading" secondItem="7HE-1s-uo8" secondAttribute="trailing" constant="8" id="V8B-Mj-hSc"/>
-                            <constraint firstItem="CdH-GT-nGu" firstAttribute="leading" secondItem="xmf-ry-oQq" secondAttribute="leading" id="Wty-aX-vot"/>
                             <constraint firstItem="UcH-2d-B7z" firstAttribute="leading" secondItem="7HE-1s-uo8" secondAttribute="trailing" constant="8" id="ZSA-wU-5od"/>
                             <constraint firstItem="9kJ-pM-1gO" firstAttribute="top" secondItem="adj-av-7tj" secondAttribute="bottom" constant="160" id="aAJ-eb-Gz3"/>
                             <constraint firstItem="ZER-Is-CI0" firstAttribute="top" secondItem="7HE-1s-uo8" secondAttribute="bottom" constant="529" id="aX6-wM-7PH"/>
-                            <constraint firstItem="9Uq-7e-geq" firstAttribute="width" secondItem="aBs-dM-1Fh" secondAttribute="height" multiplier="53:667" id="d4u-WC-gqL"/>
                             <constraint firstItem="7HE-1s-uo8" firstAttribute="width" secondItem="aBs-dM-1Fh" secondAttribute="height" multiplier="100:667" id="e1x-DD-VHB"/>
                             <constraint firstAttribute="leadingMargin" secondItem="CdH-GT-nGu" secondAttribute="leading" id="fFn-G8-h84"/>
-                            <constraint firstItem="9Uq-7e-geq" firstAttribute="top" secondItem="adj-av-7tj" secondAttribute="bottom" constant="30" id="hzc-Eb-q6W"/>
                             <constraint firstItem="UcH-2d-B7z" firstAttribute="top" secondItem="adj-av-7tj" secondAttribute="bottom" constant="43" id="on3-UF-XE8"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7HE-1s-uo8" secondAttribute="trailing" constant="243" id="p4F-HF-meh"/>
                             <constraint firstAttribute="leadingMargin" secondItem="9kJ-pM-1gO" secondAttribute="leading" id="qJq-y7-9gk"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="xmf-ry-oQq" secondAttribute="leading" id="rXR-ic-Ye2"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="favoriteButton2" destination="9Uq-7e-geq" id="RGd-I5-Lml"/>
+                        <outlet property="numberViolations" destination="21T-uG-uhv" id="cPP-Lt-DZa"/>
+                        <outlet property="restaurantAddress" destination="EfW-iG-2Ld" id="68P-ji-HRs"/>
+                        <outlet property="restaurantName" destination="UcH-2d-B7z" id="1Wo-GJ-vi3"/>
+                        <outlet property="violationInfo" destination="CdH-GT-nGu" id="b6j-Q4-3tl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iad-Vx-06P" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -459,6 +446,5 @@
     </scenes>
     <resources>
         <image name="Star Filled-50" width="50" height="50"/>
-        <image name="Star-50" width="50" height="50"/>
     </resources>
 </document>
