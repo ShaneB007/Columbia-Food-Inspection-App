@@ -8,9 +8,13 @@
 
 import UIKit
 
-class PrimaryTableViewController: UITableViewController {
+class PrimaryTableViewController: UITableViewController,  UISearchResultsUpdating {
 
+    
+    @IBOutlet var itemTableView: UITableView!
+    var searchController: UISearchController!
     var items = [Item]()
+    var fillteredItems = [Item]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +22,13 @@ class PrimaryTableViewController: UITableViewController {
         Model.sharedInstance.loadData()
         items = Model.sharedInstance.fetchCategories()
         
-        print(items[0])
+        fillteredItems = items
+        
+        searchController = UISearchController(searchResultsController: nil)
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        searchController.searchBar.sizeToFit()
+        itemTableView.tableHeaderView = searchController.searchBar
         
         title = "CoMo Food Inspections"
 
@@ -109,22 +119,28 @@ class PrimaryTableViewController: UITableViewController {
         }
     }
     
-//    func filter(_ searchText: String) -> Array<Item> {
-//        var filteredItems = Array<Item>()
-//        
-//        if searchText.isEmpty {
-//            filteredItems = items
-//        } else {
-//            for item in items {
-//                if item.establishment?.name(of: searchText, options: .caseInsensitive) != nil {
-//                    filteredItems.append(item)
-//                } else if photo.description.range(of: searchText, options: .caseInsensitive) != nil {
-//                    filteredPhotos.append(photo)
-//                }
-//            }
-//        }
-//        
-//        return filteredPhotos
-//    }
+    func updateSearchResults(for searchController: UISearchController) {
+        if let searchText = searchController.searchBar.text {
+            fillteredItems = filter(searchText)
+            itemTableView.reloadData()
+        }
+    }
+
+    
+    func filter(_ searchText: String) -> Array<Item> {
+        var filteredItems = Array<Item>()
+        
+        if searchText.isEmpty {
+            filteredItems = items
+        } else {
+            for item in items {
+                if item.establishment?.name!.range(of: searchText, options: .caseInsensitive) != nil {
+                    filteredItems.append(item)
+                } 
+            }
+        }
+        
+        return filteredItems
+    }
 
 }
