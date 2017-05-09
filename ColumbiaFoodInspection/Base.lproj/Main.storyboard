@@ -161,6 +161,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="mapView" destination="9kJ-pM-1gO" id="Gji-0g-ca3"/>
                         <outlet property="numberViolations" destination="21T-uG-uhv" id="cPP-Lt-DZa"/>
                         <outlet property="restaurantAddress" destination="EfW-iG-2Ld" id="68P-ji-HRs"/>
                         <outlet property="restaurantName" destination="UcH-2d-B7z" id="1Wo-GJ-vi3"/>

@@ -7,14 +7,17 @@
 //
 
 import UIKit
+import MapKit
+import CoreLocation
 
-class EstablishmentDetailViewController: UIViewController {
+class EstablishmentDetailViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var restaurantName: UILabel!
     @IBOutlet weak var restaurantAddress: UILabel!
     @IBOutlet weak var numberViolations: UILabel!
     @IBOutlet weak var violationInfo: UILabel!
-
+    @IBOutlet weak var mapView: MKMapView!
+    
     var item: Item?
 
     override func viewDidLoad() {
@@ -28,9 +31,34 @@ class EstablishmentDetailViewController: UIViewController {
         numberViolations.text = (("Critical Violations: ") + criticalViolations)
         
            violationInfo.text = item?.inspection?.comments
+        let geocoder = CLGeocoder()
+        let address = (item?.establishment?.address)!
+        
+        geocoder.geocodeAddressString(address, completionHandler: {(placemarks, error) -> Void in
+            if let error = error {
+                print(error)
+            }
+            //print("AAAAAAAHHHH ")
+            
+            if let placemark = placemarks?.first {
+                let coordinates:CLLocationCoordinate2D = placemark.location!.coordinate
+                let annotation = MKPointAnnotation()
+                //annotation.coordinate = CLLocationCoordinate2D(latitude: coordinates.latitude, longitude: coordinates.longitude)
+                annotation.coordinate = CLLocationCoordinate2D(latitude: coordinates.latitude, longitude: coordinates.longitude)
+                annotation.title = address
+                //print("TITLE: ", annotation.title!)
+                self.mapView.addAnnotation(annotation)
+                
+                let span:MKCoordinateSpan = MKCoordinateSpanMake(0.01, 0.01)
+                let region:MKCoordinateRegion = MKCoordinateRegionMake(coordinates, span)
+                self.mapView.setRegion(region, animated: true)
+            }
+    })
 
+    
+        
         // Do any additional setup after loading the view.
-    }
+}
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

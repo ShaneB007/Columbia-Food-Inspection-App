@@ -14,8 +14,11 @@ class searchMapViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
     
+    
+    
+    
     let manager = CLLocationManager()
-    let geocoder = CLGeocoder()
+    
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
@@ -44,44 +47,83 @@ class searchMapViewController: UIViewController, CLLocationManagerDelegate {
         manager.desiredAccuracy = kCLLocationAccuracyBest
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
+        //var st = "hello"
+        var items = Model.sharedInstance.fetchCategories()
+
+        var address: String
         
-        
-        let address = "308 South 9th street, MO, USA"
-        
-        
-        
-        
-        geocoder.geocodeAddressString(address, completionHandler: {(placemarks, error) -> Void in
-            if let error = error {
-                print(error)
-            }
+        for item in items{
             
-            if let placemark = placemarks?.first {
-                let coordinates:CLLocationCoordinate2D = placemark.location!.coordinate
-                
-                let currLocation = self.manager.location?.coordinate ?? CLLocationCoordinate2D()
-                let loc = CLLocation(latitude: coordinates.latitude, longitude: coordinates.longitude)
-                let loc1 = CLLocation(latitude: currLocation.latitude, longitude: currLocation.longitude)
-                let distance = loc1.distance(from: loc)
-                
-                if(distance <= 315)
-                {
-                    print("Location1 latitude = ", currLocation.latitude,"Location1 longitude = ", currLocation.longitude, "distance = ", distance)
-                    
-                    print("latitude = ", coordinates.latitude, "longitude = ", coordinates.longitude)
-                    
-                    let annotation = MKPointAnnotation()
-                    //annotation.coordinate = CLLocationCoordinate2D(latitude: coordinates.latitude, longitude: coordinates.longitude)
-                    annotation.coordinate = CLLocationCoordinate2D(latitude: coordinates.latitude, longitude: coordinates.longitude)
-                    annotation.title = "Hello There"
-                    self.mapView.addAnnotation(annotation)
-                    
-                }
-            }
-        })
+            address = (item.establishment?.address)!
+            
+            let geocoder = CLGeocoder()
+            
+            ann(address: address, geocoder: geocoder)
+            
+            //let address = item.establishment?.address
+            
+            
+            //print("Address = ", address)
         
+        //let address  = "2601 S PROVIDENCE COLUMBIA 65203"
+        
+        //if let article = establishment[indexPath.address].articlesArray?[indexPath.row] {
+        
+
+            
+        }
         
     }
+    
+    
+    
+    func ann(address: String, geocoder: CLGeocoder) -> Void{
+    
+    //print("CALLED")
+    
+    geocoder.geocodeAddressString(address, completionHandler: {(placemarks, error) -> Void in
+        if let error = error {
+            print(error)
+        }
+        //print("AAAAAAAHHHH ")
+    
+        if let placemark = placemarks?.first {
+            let coordinates:CLLocationCoordinate2D = placemark.location!.coordinate
+    
+            let currLocation = self.manager.location?.coordinate ?? CLLocationCoordinate2D()
+            let loc = CLLocation(latitude: coordinates.latitude, longitude: coordinates.longitude)
+            let loc1 = CLLocation(latitude: currLocation.latitude, longitude: currLocation.longitude)
+            let distance = loc1.distance(from: loc)
+    
+            if(distance <= 3218)
+            {
+                print("Location1 latitude = ", currLocation.latitude,"Location1 longitude = ", currLocation.longitude, "distance = ", distance)
+    
+                print("latitude = ", coordinates.latitude, "longitude = ", coordinates.longitude)
+    
+                let annotation = MKPointAnnotation()
+                //annotation.coordinate = CLLocationCoordinate2D(latitude: coordinates.latitude, longitude: coordinates.longitude)
+                annotation.coordinate = CLLocationCoordinate2D(latitude: coordinates.latitude, longitude: coordinates.longitude)
+                annotation.title = address
+                print("TITLE: ", annotation.title!)
+                self.mapView.addAnnotation(annotation)
+    
+            }
+        }
+    })
+    
+}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
