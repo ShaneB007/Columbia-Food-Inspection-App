@@ -63,10 +63,10 @@ class PrimaryTableViewController: UITableViewController,  UISearchResultsUpdatin
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Established List Cell", for: indexPath)
         
-        cell.textLabel?.text = items[indexPath.row].establishment?.name!
-        cell.detailTextLabel?.text = items[indexPath.row].inspection?.violations?.criticality!
+        cell.textLabel?.text = fillteredItems[indexPath.row].establishment?.name!
+        cell.detailTextLabel?.text = fillteredItems[indexPath.row].inspection?.violations?.criticality!
         
-        print(items[indexPath.row].inspection?.results?.critical)
+        
         return cell
     }
     
