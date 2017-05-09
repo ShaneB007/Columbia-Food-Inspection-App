@@ -66,31 +66,28 @@ class PrimaryTableViewController: UITableViewController,  UISearchResultsUpdatin
         cell.textLabel?.text = items[indexPath.row].establishment?.name!
         cell.detailTextLabel?.text = items[indexPath.row].inspection?.violations?.criticality!
         
-        // let critFixed =  Int(truncatingBitPattern: crit!)
-        let crit = items[indexPath.row].inspection?.results?.critical
-        //let critFixed =  Int(truncatingBitPattern: crit!)
-        if crit == 2{
-            cell.backgroundColor = UIColor.yellow
-        }
-        print(items[indexPath.row].inspection?.results?.critical, items[indexPath.row].inspection?.date, items[indexPath.row].inspection?.comments)
+        print(items[indexPath.row].inspection?.results?.critical, items[indexPath.row].inspection?.results?.noncritical)
         
-//        if let crit = items[indexPath.row].inspection?.results?.critical{
-//            switch crit{
-//            case 2:
-//                cell.backgroundColor = UIColor.green
-//            case 3:
-//                cell.backgroundColor = UIColor.yellow
-//            case 5:
-//                cell.backgroundColor = UIColor.orange
-//            default:
-//                cell.backgroundColor = UIColor.red
-//                
-//            }
-//        }
+        if let crit = items[indexPath.row].inspection?.results?.critical{
+            switch crit{
+            case 0..<2:
+                cell.backgroundColor = UIColor.green
+            case 2..<4:
+                cell.backgroundColor = UIColor.yellow
+            case 4..<6:
+                cell.backgroundColor = UIColor.orange
+            default:
+                cell.backgroundColor = UIColor.red
+                
+            }
+        }
+        
 //        if let noncrit = items[indexPath.row].inspection?.results?.noncritical{
 //            switch noncrit{
 //                case 0..<6:
-//                    cell.backgroundColor = UIColor.green
+//                    if (cell.backgroundColor == UIColor.green){
+//                        cell.backgroundColor = UIColor.green
+//                    }
 //                case 6..<11:
 //                    cell.backgroundColor = UIColor.yellow
 //                case 11..<21:
