@@ -39,10 +39,13 @@ class MainJSONParser {
                         if let inspection = item["inspections"] as? [String: Any] {
                             if let results = inspection["results"] as? [String: Any] {
                                 
-                                let critical = results["critical"] as? Int64
-                                let noncritical = results["noncritical"] as? Int64
+                                let critical = results["critical"] as? String
+                                let noncritical = results["noncritical"] as? String
+                                let x: Int64? =  Int64(critical!)
+                                let y: Int64? = Int64(noncritical!)
                                 
-                                result = Results(critical: critical!, noncritical: noncritical!)
+                                
+                                result = Results(critical: x!, noncritical: y!)
                                 
 
                             }
@@ -54,8 +57,8 @@ class MainJSONParser {
                             if let violations = inspection["violations"] as? [String: Any] {
                                 
                                 let comments = violations["comments"] as? String
-                                let violationName = violations["violationName"] as? String
-                                let violationCode = violations["violationCode"] as? String
+                                let violationName = violations["violationname"] as? String
+                                let violationCode = violations["violationcode"] as? String
                                 let criticality = violations["criticality"] as? String
                                 
                                 violation = Violations(comments: comments, violationCode: violationCode, violationName: violationName, criticality: criticality)
