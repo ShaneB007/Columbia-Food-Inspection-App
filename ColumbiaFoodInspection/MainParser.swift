@@ -36,7 +36,7 @@ class MainJSONParser {
 
                         }
                         
-                        if let inspection = item["inspection"] as? [String: Any] {
+                        if let inspection = item["inspections"] as? [String: Any] {
                             if let results = inspection["results"] as? [String: Any] {
                                 
                                 let critical = results["critical"] as? Int64
