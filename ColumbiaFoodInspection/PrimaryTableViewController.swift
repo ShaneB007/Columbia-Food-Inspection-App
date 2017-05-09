@@ -73,5 +73,23 @@ class PrimaryTableViewController: UITableViewController {
             
         }
     }
+    
+//    func filter(_ searchText: String) -> Array<Item> {
+//        var filteredItems = Array<Item>()
+//        
+//        if searchText.isEmpty {
+//            filteredItems = items
+//        } else {
+//            for item in items {
+//                if item.establishment?.name(of: searchText, options: .caseInsensitive) != nil {
+//                    filteredItems.append(item)
+//                } else if photo.description.range(of: searchText, options: .caseInsensitive) != nil {
+//                    filteredPhotos.append(photo)
+//                }
+//            }
+//        }
+//        
+//        return filteredPhotos
+//    }
 
 }
