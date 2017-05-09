@@ -57,37 +57,40 @@ class PrimaryTableViewController: UITableViewController {
         cell.detailTextLabel?.text = items[indexPath.row].inspection?.violations?.criticality!
         
         // let critFixed =  Int(truncatingBitPattern: crit!)
+        let crit = items[indexPath.row].inspection?.results?.critical
+        //let critFixed =  Int(truncatingBitPattern: crit!)
+        if crit == 2{
+            cell.backgroundColor = UIColor.yellow
+        }
+        print(items[indexPath.row].inspection?.results?.critical, items[indexPath.row].inspection?.date, items[indexPath.row].inspection?.comments)
         
-        //
-        if let crit = items[indexPath.row].inspection?.results?.critical{
-            switch crit{
-            case 0..<2:
-                cell.backgroundColor = UIColor.green
-            case 1..<3:
-                cell.backgroundColor = UIColor.yellow
-            case 2..<6:
-                cell.backgroundColor = UIColor.orange
-            case 6..<45:
-                cell.backgroundColor = UIColor.red
-            default:
-                cell.backgroundColor = UIColor.white
-                
-            }
-        }
-        if let noncrit = items[indexPath.row].inspection?.results?.noncritical{
-            switch noncrit{
-                case 0..<6:
-                    cell.backgroundColor = UIColor.green
-                case 6..<11:
-                    cell.backgroundColor = UIColor.yellow
-                case 11..<21:
-                    cell.backgroundColor = UIColor.orange
-                case 21..<45:
-                    cell.backgroundColor = UIColor.red
-                default:
-                    cell.backgroundColor = UIColor.white
-            }
-        }
+//        if let crit = items[indexPath.row].inspection?.results?.critical{
+//            switch crit{
+//            case 2:
+//                cell.backgroundColor = UIColor.green
+//            case 3:
+//                cell.backgroundColor = UIColor.yellow
+//            case 5:
+//                cell.backgroundColor = UIColor.orange
+//            default:
+//                cell.backgroundColor = UIColor.red
+//                
+//            }
+//        }
+//        if let noncrit = items[indexPath.row].inspection?.results?.noncritical{
+//            switch noncrit{
+//                case 0..<6:
+//                    cell.backgroundColor = UIColor.green
+//                case 6..<11:
+//                    cell.backgroundColor = UIColor.yellow
+//                case 11..<21:
+//                    cell.backgroundColor = UIColor.orange
+//                case 21..<45:
+//                    cell.backgroundColor = UIColor.red
+//                default:
+//                    cell.backgroundColor = UIColor.white
+//            }
+//        }
         
         return cell
     }
