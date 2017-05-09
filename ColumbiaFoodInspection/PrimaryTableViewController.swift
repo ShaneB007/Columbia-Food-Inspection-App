@@ -110,7 +110,7 @@ class PrimaryTableViewController: UITableViewController,  UISearchResultsUpdatin
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? EstablishmentDetailViewController,
             let indexPath = tableView.indexPathForSelectedRow {
-            
+                
                 destination.item = items[indexPath.row]
             
             
