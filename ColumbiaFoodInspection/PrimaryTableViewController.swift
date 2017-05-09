@@ -64,7 +64,7 @@ class PrimaryTableViewController: UITableViewController,  UISearchResultsUpdatin
         let cell = tableView.dequeueReusableCell(withIdentifier: "Established List Cell", for: indexPath)
         
         cell.textLabel?.text = fillteredItems[indexPath.row].establishment?.name!
-        cell.detailTextLabel?.text = fillteredItems[indexPath.row].inspection?.violations?.criticality!
+        cell.detailTextLabel?.text = fillteredItems[indexPath.row].establishment?.address!
         
         
         print(items[indexPath.row].inspection?.results?.critical, items[indexPath.row].inspection?.results?.noncritical)
