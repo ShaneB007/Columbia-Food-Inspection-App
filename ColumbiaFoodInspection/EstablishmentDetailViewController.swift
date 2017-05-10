@@ -11,12 +11,20 @@ import MapKit
 import CoreLocation
 
 class EstablishmentDetailViewController: UIViewController, CLLocationManagerDelegate {
-    
+//    let dateFormatter: DateFormatter = {
+//        let formatter = DateFormatter()
+//        formatter.dateStyle = .medium
+//        formatter.timeStyle = .none
+//        return formatter
+//    }()
     @IBOutlet weak var violationColor: UIImageView!
     @IBOutlet weak var restaurantName: UILabel!
     @IBOutlet weak var restaurantAddress: UILabel!
     @IBOutlet weak var numberViolations: UILabel!
-    @IBOutlet weak var violationInfo: UILabel!
+ 
+    @IBOutlet weak var inspecDate: UILabel!
+    
+    @IBOutlet weak var noncrit: UILabel!
     @IBOutlet weak var mapView: MKMapView!
     
     var item: Item?
@@ -48,8 +56,11 @@ class EstablishmentDetailViewController: UIViewController, CLLocationManagerDele
          let criticalViolations = String(describing: x!)
         
         numberViolations.text = (("Critical Violations: ") + criticalViolations)
+        let typeinspec = item?.inspection?.type
+        noncrit.text = (("Last Inspection Type: ") + typeinspec! )
         
-           violationInfo.text = item?.inspection?.comments
+       let datevar  = item?.inspection?.date
+        inspecDate.text = ("Inspection Date: " + datevar!)
         let geocoder = CLGeocoder()
         let address = (item?.establishment?.address)!
         
