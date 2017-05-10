@@ -21,8 +21,8 @@ class EstablishmentDetailViewController: UIViewController, CLLocationManagerDele
     @IBOutlet weak var restaurantName: UILabel!
     @IBOutlet weak var restaurantAddress: UILabel!
     @IBOutlet weak var numberViolations: UILabel!
- 
-    @IBOutlet weak var inspecDate: UILabel!
+    @IBOutlet weak var comment: UITextView!
+    @IBOutlet weak var star: UIButton!
     
     @IBOutlet weak var noncrit: UILabel!
     @IBOutlet weak var mapView: MKMapView!
@@ -59,8 +59,10 @@ class EstablishmentDetailViewController: UIViewController, CLLocationManagerDele
         let typeinspec = item?.inspection?.type
         noncrit.text = (("Last Inspection Type: ") + typeinspec! )
         
-       let datevar  = item?.inspection?.date
-        inspecDate.text = ("Inspection Date: " + datevar!)
+        if comment.text == " " {
+            comment.text = "No Comments"
+        }else { comment.text = item?.inspection?.comments }
+        
         let geocoder = CLGeocoder()
         let address = (item?.establishment?.address)!
         
@@ -93,6 +95,21 @@ class EstablishmentDetailViewController: UIViewController, CLLocationManagerDele
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func favorited(_ sender: UIButton) {
+        if (item?.favorite == false)
+        {
+            item?.favorite = true
+            star.setImage(#imageLiteral(resourceName: "Star Filled-50"), for: .selected)
+           
+        }
+        else
+        {
+            item?.favorite = false
+            star.setImage(#imageLiteral(resourceName: "Star-50"), for: .normal)
+        }
+        
     }
     
 
