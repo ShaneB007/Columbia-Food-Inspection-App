@@ -297,7 +297,7 @@
                             <constraint firstItem="G2D-d6-xpE" firstAttribute="leading" secondItem="kUf-AM-o7H" secondAttribute="leading" id="xdY-eM-SaT"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="search" id="Wqf-vb-xa4"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="pin-map-7.png" id="Wqf-vb-xa4"/>
                     <navigationItem key="navigationItem" id="oSh-RF-TLn">
                         <nil key="title"/>
                     </navigationItem>
@@ -337,7 +337,7 @@
         <scene sceneID="4KF-ab-CQ7">
             <objects>
                 <navigationController title="Navigation Controller" id="akw-M5-sYw" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="mostRecent" id="cJn-v5-Ozx"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house-7.png" id="cJn-v5-Ozx"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rc2-gD-IEm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -351,11 +351,11 @@
             </objects>
             <point key="canvasLocation" x="-2790" y="1084"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Map-->
         <scene sceneID="8cm-3U-ecs">
             <objects>
                 <navigationController id="Lge-91-T0B" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="search" id="V6X-Pq-YcI"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="pin-map-7.png" id="V6X-Pq-YcI"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dsp-hc-smM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -539,8 +539,10 @@
     </scenes>
     <resources>
         <image name="Star-50" width="50" height="50"/>
+        <image name="house-7.png" width="30" height="30"/>
+        <image name="pin-map-7.png" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0IP-7C-ZQO"/>
+        <segue reference="lvQ-fN-Vqe"/>
     </inferredMetricsTieBreakers>
 </document>

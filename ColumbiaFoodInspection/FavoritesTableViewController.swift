@@ -59,7 +59,9 @@ class FavoritesTableViewController: UITableViewController {
         cell.textLabel?.text = fillteredItems[indexPath.row].establishment?.name!
         cell.detailTextLabel?.text = fillteredItems[indexPath.row].establishment?.address!
         
-        if let crit = items[indexPath.row].inspection?.results?.critical{
+        cell.backgroundColor = UIColor.init(red:0.77, green:0.78, blue:0.79, alpha:1.0)
+        
+        if let crit = fillteredItems[indexPath.row].inspection?.results?.critical{
             switch crit{
             case 0..<2:
                 cell.textLabel?.textColor = UIColor.init(red: 0.07, green: 0.67, blue: 0.04, alpha: 1.0)
@@ -101,7 +103,7 @@ class FavoritesTableViewController: UITableViewController {
         if let destination = segue.destination as? EstablishmentDetailViewController,
             let indexPath = tableView.indexPathForSelectedRow {
             
-            destination.item = items[indexPath.row]
+            destination.item = fillteredItems[indexPath.row]
             
             
         }

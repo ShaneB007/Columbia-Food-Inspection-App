@@ -44,7 +44,7 @@ class EstablishmentDetailViewController: UIViewController, CLLocationManagerDele
             restaurantName.text = item?.establishment?.name
             restaurantAddress.text = item?.establishment?.address
             restaurantAddress.sizeToFit()
-        view.backgroundColor = UIColor.init(red: 0.09, green: 0.38, blue: 0.62, alpha: 1.0)
+        view.backgroundColor = UIColor.init(red:0.77, green:0.78, blue:0.79, alpha:1.0)
         if let crit = item?.inspection?.results?.critical{
             switch crit{
             case 0..<2:
@@ -75,6 +75,7 @@ class EstablishmentDetailViewController: UIViewController, CLLocationManagerDele
         
         let geocoder = CLGeocoder()
         let address = (item?.establishment?.address)!
+        let name = (item?.establishment?.name)!
         
         geocoder.geocodeAddressString(address, completionHandler: {(placemarks, error) -> Void in
             if let error = error {
@@ -87,7 +88,8 @@ class EstablishmentDetailViewController: UIViewController, CLLocationManagerDele
                 let annotation = MKPointAnnotation()
                 //annotation.coordinate = CLLocationCoordinate2D(latitude: coordinates.latitude, longitude: coordinates.longitude)
                 annotation.coordinate = CLLocationCoordinate2D(latitude: coordinates.latitude, longitude: coordinates.longitude)
-                annotation.title = address
+                annotation.title = name
+                annotation.subtitle = address
                 //print("TITLE: ", annotation.title!)
                 self.mapView.addAnnotation(annotation)
                 

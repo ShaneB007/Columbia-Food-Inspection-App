@@ -29,7 +29,7 @@ class AboutViewController: UIViewController{
         LogoTitle.text = "Clean Eats CoMo"
         
         infoPageTitle.backgroundColor = UIColor.init(red: 0.09, green: 0.38, blue: 0.62, alpha: 1.0)
-        view.backgroundColor = UIColor.init(red: 0.46, green: 0.45, blue: 0.45, alpha: 1.0)
+        view.backgroundColor = UIColor.init(red:0.77, green:0.78, blue:0.79, alpha:1.0)
         
         
         infoPageTitle.text = "Information"
