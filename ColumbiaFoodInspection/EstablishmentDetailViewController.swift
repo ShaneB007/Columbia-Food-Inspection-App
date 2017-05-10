@@ -31,6 +31,16 @@ class EstablishmentDetailViewController: UIViewController, CLLocationManagerDele
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        if (item?.favorite == true)
+        {
+            star.setImage(#imageLiteral(resourceName: "Star Filled-50"), for: .normal)
+            
+        }
+        else
+        {
+            star.setImage(#imageLiteral(resourceName: "Star-50"), for: .normal)
+        }
+
             restaurantName.text = item?.establishment?.name
             restaurantAddress.text = item?.establishment?.address
             restaurantAddress.sizeToFit()
@@ -101,7 +111,7 @@ class EstablishmentDetailViewController: UIViewController, CLLocationManagerDele
         if (item?.favorite == false)
         {
             item?.favorite = true
-            star.setImage(#imageLiteral(resourceName: "Star Filled-50"), for: .selected)
+            star.setImage(#imageLiteral(resourceName: "Star Filled-50"), for: .normal)
            
         }
         else
