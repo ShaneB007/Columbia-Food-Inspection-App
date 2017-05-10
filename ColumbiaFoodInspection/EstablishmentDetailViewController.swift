@@ -75,6 +75,7 @@ class EstablishmentDetailViewController: UIViewController, CLLocationManagerDele
         
         let geocoder = CLGeocoder()
         let address = (item?.establishment?.address)!
+        let name = (item?.establishment?.name)!
         
         geocoder.geocodeAddressString(address, completionHandler: {(placemarks, error) -> Void in
             if let error = error {
@@ -87,7 +88,8 @@ class EstablishmentDetailViewController: UIViewController, CLLocationManagerDele
                 let annotation = MKPointAnnotation()
                 //annotation.coordinate = CLLocationCoordinate2D(latitude: coordinates.latitude, longitude: coordinates.longitude)
                 annotation.coordinate = CLLocationCoordinate2D(latitude: coordinates.latitude, longitude: coordinates.longitude)
-                annotation.title = address
+                annotation.title = name
+                annotation.subtitle = address
                 //print("TITLE: ", annotation.title!)
                 self.mapView.addAnnotation(annotation)
                 

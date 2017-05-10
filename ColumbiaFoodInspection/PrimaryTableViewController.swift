@@ -48,7 +48,7 @@ class PrimaryTableViewController: UITableViewController,  UISearchResultsUpdatin
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        return fillteredItems.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -59,7 +59,7 @@ class PrimaryTableViewController: UITableViewController,  UISearchResultsUpdatin
 
         cell.backgroundColor = UIColor.init(red:0.77, green:0.78, blue:0.79, alpha:1.0)
         
-        if let crit = items[indexPath.row].inspection?.results?.critical{
+        if let crit = fillteredItems[indexPath.row].inspection?.results?.critical{
             switch crit{
             case 0..<2:
                 cell.textLabel?.textColor = UIColor.init(red: 0.07, green: 0.67, blue: 0.04, alpha: 1.0)
@@ -101,7 +101,7 @@ class PrimaryTableViewController: UITableViewController,  UISearchResultsUpdatin
         if let destination = segue.destination as? EstablishmentDetailViewController,
             let indexPath = tableView.indexPathForSelectedRow {
                 
-                destination.item = items[indexPath.row]
+                destination.item = fillteredItems[indexPath.row]
             
             
         }
