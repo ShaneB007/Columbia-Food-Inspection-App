@@ -223,25 +223,42 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="G2D-d6-xpE">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                             </mapView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="N4d-D4-SIU">
+                                <rect key="frame" x="84" y="64" width="207" height="29"/>
+                                <segments>
+                                    <segment title="1 mile"/>
+                                    <segment title="2 mile"/>
+                                    <segment title="5 mile"/>
+                                    <segment title="All"/>
+                                </segments>
+                                <connections>
+                                    <action selector="radius:" destination="c6B-uU-6fI" eventType="valueChanged" id="tHT-Fa-XHs"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="G2D-d6-xpE" firstAttribute="top" secondItem="61e-u3-OoL" secondAttribute="bottom" id="5GR-Iv-S28"/>
                             <constraint firstAttribute="trailing" secondItem="G2D-d6-xpE" secondAttribute="trailing" id="IvY-1a-wqQ"/>
+                            <constraint firstItem="N4d-D4-SIU" firstAttribute="centerX" secondItem="G2D-d6-xpE" secondAttribute="centerX" id="QzU-Fi-YSF"/>
                             <constraint firstItem="Uia-E5-C76" firstAttribute="top" secondItem="G2D-d6-xpE" secondAttribute="bottom" id="utN-L2-vdl"/>
+                            <constraint firstItem="N4d-D4-SIU" firstAttribute="top" secondItem="61e-u3-OoL" secondAttribute="bottom" id="w79-Ws-TZ3"/>
                             <constraint firstItem="G2D-d6-xpE" firstAttribute="leading" secondItem="kUf-AM-o7H" secondAttribute="leading" id="xdY-eM-SaT"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="search" id="Wqf-vb-xa4"/>
-                    <navigationItem key="navigationItem" id="oSh-RF-TLn"/>
+                    <navigationItem key="navigationItem" id="oSh-RF-TLn">
+                        <nil key="title"/>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="controller" destination="N4d-D4-SIU" id="gqg-AR-N4k"/>
                         <outlet property="mapView" destination="G2D-d6-xpE" id="VUU-dH-qy3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WwQ-hf-KXd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1855" y="1941"/>
+            <point key="canvasLocation" x="-1855.2" y="1940.7796101949027"/>
         </scene>
         <!--Tab Bar Main-->
         <scene sceneID="z8V-tg-MnV">
