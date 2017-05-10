@@ -32,6 +32,7 @@
 		B43CC1BF1EA5215E00E120F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B43CC1BE1EA5215E00E120F5 /* Assets.xcassets */; };
 		B43CC1C21EA5215E00E120F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B43CC1C01EA5215E00E120F5 /* LaunchScreen.storyboard */; };
 		B48228DF1EBD094B005B014F /* ButtonChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48228DE1EBD094B005B014F /* ButtonChange.swift */; };
+		BA3CDF0D1EC3579C00856880 /* ios in Resources */ = {isa = PBXBuildFile; fileRef = BA3CDF0C1EC3579C00856880 /* ios */; };
 		BAFE8A751EC2ABBB005A2B6E /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFE8A741EC2ABBB005A2B6E /* AboutViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,7 @@
 		B43CC1C11EA5215E00E120F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B43CC1C31EA5215E00E120F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B48228DE1EBD094B005B014F /* ButtonChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonChange.swift; sourceTree = "<group>"; };
+		BA3CDF0C1EC3579C00856880 /* ios */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ios; sourceTree = "<group>"; };
 		BAFE8A741EC2ABBB005A2B6E /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +108,7 @@
 		B43CC1B31EA5215E00E120F5 /* ColumbiaFoodInspection */ = {
 			isa = PBXGroup;
 			children = (
+				BA3CDF0C1EC3579C00856880 /* ios */,
 				3B7434691EB7AD6300F74BC2 /* Establishment+CoreDataClass.swift */,
 				3B74346A1EB7AD6300F74BC2 /* Establishment+CoreDataProperties.swift */,
 				3B74346B1EB7AD6300F74BC2 /* Violations+CoreDataClass.swift */,
@@ -199,6 +202,7 @@
 				B43CC1C21EA5215E00E120F5 /* LaunchScreen.storyboard in Resources */,
 				B43CC1BF1EA5215E00E120F5 /* Assets.xcassets in Resources */,
 				B43CC1BA1EA5215E00E120F5 /* Main.storyboard in Resources */,
+				BA3CDF0D1EC3579C00856880 /* ios in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
