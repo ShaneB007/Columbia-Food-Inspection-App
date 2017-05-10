@@ -56,9 +56,8 @@ class PrimaryTableViewController: UITableViewController,  UISearchResultsUpdatin
         
         cell.textLabel?.text = fillteredItems[indexPath.row].establishment?.name!
         cell.detailTextLabel?.text = fillteredItems[indexPath.row].establishment?.address!
-        
-        
-        print(items[indexPath.row].inspection?.results?.critical, items[indexPath.row].inspection?.results?.noncritical)
+
+        cell.backgroundColor = UIColor.init(red:0.46, green:0.45, blue:0.45, alpha:1.0)
         
         if let crit = items[indexPath.row].inspection?.results?.critical{
             switch crit{
