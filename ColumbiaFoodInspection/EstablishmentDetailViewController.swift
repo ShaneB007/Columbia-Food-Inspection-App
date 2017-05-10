@@ -26,6 +26,7 @@ class EstablishmentDetailViewController: UIViewController, CLLocationManagerDele
             restaurantName.text = item?.establishment?.name
             restaurantAddress.text = item?.establishment?.address
             restaurantAddress.sizeToFit()
+        view.backgroundColor = UIColor.init(red: 0.09, green: 0.38, blue: 0.62, alpha: 1.0)
         if let crit = item?.inspection?.results?.critical{
             switch crit{
             case 0..<2:
