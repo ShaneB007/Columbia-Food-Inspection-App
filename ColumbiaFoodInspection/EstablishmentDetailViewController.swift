@@ -111,7 +111,7 @@ class EstablishmentDetailViewController: UIViewController, CLLocationManagerDele
         }
         
     }
-    
+
 
     /*
     // MARK: - Navigation
