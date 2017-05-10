@@ -31,12 +31,7 @@ class PrimaryTableViewController: UITableViewController,  UISearchResultsUpdatin
         itemTableView.tableHeaderView = searchController.searchBar
         
         title = "CoMo Food Inspections"
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        tableView.backgroundColor = UIColor.init(red: 0.09, green: 0.38, blue: 0.62, alpha: 1.0)
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,10 +41,6 @@ class PrimaryTableViewController: UITableViewController,  UISearchResultsUpdatin
     
 
     // MARK: - Table view data source
-    
-    
-    
-
 
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -72,13 +63,13 @@ class PrimaryTableViewController: UITableViewController,  UISearchResultsUpdatin
         if let crit = items[indexPath.row].inspection?.results?.critical{
             switch crit{
             case 0..<2:
-                cell.backgroundColor = UIColor.green
+                cell.textLabel?.textColor = UIColor.init(red: 0.07, green: 0.67, blue: 0.04, alpha: 1.0)
             case 2..<4:
-                cell.backgroundColor = UIColor.yellow
+                cell.textLabel?.textColor = UIColor.init(red: 0.89, green: 0.89, blue: 0.00, alpha: 1.0)
             case 4..<6:
-                cell.backgroundColor = UIColor.orange
+                cell.textLabel?.textColor = UIColor.orange
             default:
-                cell.backgroundColor = UIColor.red
+                cell.textLabel?.textColor = UIColor.red
                 
             }
         }
