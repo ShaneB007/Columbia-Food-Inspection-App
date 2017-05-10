@@ -103,7 +103,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Critical" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="21T-uG-uhv">
-                                <rect key="frame" x="16" y="459" width="343" height="21"/>
+                                <rect key="frame" x="161" y="459" width="53.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -117,8 +117,14 @@
                                     <tabBarItem systemItem="more" id="SRD-Nm-Z5C"/>
                                 </items>
                             </tabBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Violation Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CdH-GT-nGu">
-                                <rect key="frame" x="16" y="540" width="343" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0yg-f6-ulB">
+                                <rect key="frame" x="16" y="498" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xqj-x3-nSG">
+                                <rect key="frame" x="16" y="537" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -127,33 +133,36 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="leadingMargin" secondItem="7HE-1s-uo8" secondAttribute="leading" id="2mp-UK-mR1"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="21T-uG-uhv" secondAttribute="trailing" id="CRs-Ny-wiC"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="CdH-GT-nGu" secondAttribute="leading" id="FyT-TV-tsD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Xqj-x3-nSG" secondAttribute="trailing" id="4xT-qb-rTD"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="0yg-f6-ulB" secondAttribute="leading" id="5La-cM-WcN"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Xqj-x3-nSG" secondAttribute="leading" id="7kW-fB-mJM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0yg-f6-ulB" secondAttribute="trailing" id="DPa-5B-4wJ"/>
                             <constraint firstItem="EfW-iG-2Ld" firstAttribute="top" secondItem="UcH-2d-B7z" secondAttribute="bottom" constant="25" id="Hjz-Rj-byx"/>
-                            <constraint firstItem="ZER-Is-CI0" firstAttribute="top" secondItem="CdH-GT-nGu" secondAttribute="bottom" constant="106.5" id="L97-H1-ibq"/>
                             <constraint firstItem="ZER-Is-CI0" firstAttribute="top" secondItem="9kJ-pM-1gO" secondAttribute="bottom" constant="233" id="LYB-In-1ny"/>
                             <constraint firstItem="EfW-iG-2Ld" firstAttribute="centerX" secondItem="aBs-dM-1Fh" secondAttribute="centerX" id="O2O-Tt-Dbh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9kJ-pM-1gO" secondAttribute="trailing" id="T2X-mk-Ypn"/>
                             <constraint firstItem="7HE-1s-uo8" firstAttribute="top" secondItem="adj-av-7tj" secondAttribute="bottom" constant="30" id="UOG-2L-78g"/>
                             <constraint firstItem="9kJ-pM-1gO" firstAttribute="top" secondItem="adj-av-7tj" secondAttribute="bottom" constant="160" id="aAJ-eb-Gz3"/>
                             <constraint firstItem="ZER-Is-CI0" firstAttribute="top" secondItem="7HE-1s-uo8" secondAttribute="bottom" constant="529" id="aX6-wM-7PH"/>
-                            <constraint firstItem="CdH-GT-nGu" firstAttribute="top" secondItem="21T-uG-uhv" secondAttribute="bottom" constant="60" id="abw-rT-aLW"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="CdH-GT-nGu" secondAttribute="trailing" id="lSC-oT-jKp"/>
+                            <constraint firstItem="Xqj-x3-nSG" firstAttribute="top" secondItem="0yg-f6-ulB" secondAttribute="bottom" constant="18" id="gnh-kB-KcT"/>
+                            <constraint firstItem="21T-uG-uhv" firstAttribute="centerX" secondItem="aBs-dM-1Fh" secondAttribute="centerX" id="i5m-Ca-3Bo"/>
+                            <constraint firstItem="0yg-f6-ulB" firstAttribute="top" secondItem="21T-uG-uhv" secondAttribute="bottom" constant="18" id="iGJ-oM-bpo"/>
                             <constraint firstItem="UcH-2d-B7z" firstAttribute="top" secondItem="adj-av-7tj" secondAttribute="bottom" constant="43" id="on3-UF-XE8"/>
                             <constraint firstAttribute="leadingMargin" secondItem="9kJ-pM-1gO" secondAttribute="leading" id="qJq-y7-9gk"/>
                             <constraint firstItem="7HE-1s-uo8" firstAttribute="trailing" secondItem="aBs-dM-1Fh" secondAttribute="trailingMargin" id="rJS-rE-u9v"/>
                             <constraint firstItem="UcH-2d-B7z" firstAttribute="centerX" secondItem="aBs-dM-1Fh" secondAttribute="centerX" id="vgO-0m-hGl"/>
-                            <constraint firstItem="21T-uG-uhv" firstAttribute="leading" secondItem="aBs-dM-1Fh" secondAttribute="leadingMargin" id="y5y-yH-BNf"/>
+                            <constraint firstItem="ZER-Is-CI0" firstAttribute="top" secondItem="Xqj-x3-nSG" secondAttribute="bottom" constant="109" id="yDb-BY-TXm"/>
                             <constraint firstItem="21T-uG-uhv" firstAttribute="top" secondItem="9kJ-pM-1gO" secondAttribute="bottom" constant="25" id="yZ3-oI-xAv"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="inspecDate" destination="Xqj-x3-nSG" id="CB2-BX-xkw"/>
                         <outlet property="mapView" destination="9kJ-pM-1gO" id="Gji-0g-ca3"/>
+                        <outlet property="noncrit" destination="0yg-f6-ulB" id="BuW-vZ-cTB"/>
                         <outlet property="numberViolations" destination="21T-uG-uhv" id="cPP-Lt-DZa"/>
                         <outlet property="restaurantAddress" destination="EfW-iG-2Ld" id="68P-ji-HRs"/>
                         <outlet property="restaurantName" destination="UcH-2d-B7z" id="1Wo-GJ-vi3"/>
                         <outlet property="violationColor" destination="7HE-1s-uo8" id="1Xu-8X-roo"/>
-                        <outlet property="violationInfo" destination="CdH-GT-nGu" id="b6j-Q4-3tl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iad-Vx-06P" userLabel="First Responder" sceneMemberID="firstResponder"/>
