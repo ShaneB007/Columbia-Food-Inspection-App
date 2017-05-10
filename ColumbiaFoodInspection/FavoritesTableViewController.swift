@@ -60,8 +60,6 @@ class FavoritesTableViewController: UITableViewController {
         cell.detailTextLabel?.text = fillteredItems[indexPath.row].establishment?.address!
         
         
-        print(fillteredItems[indexPath.row].inspection?.results?.critical, items[indexPath.row].inspection?.results?.noncritical)
-        
         if let crit = fillteredItems[indexPath.row].inspection?.results?.critical{
             switch crit{
             case 0..<2:
