@@ -31,7 +31,8 @@ class PrimaryTableViewController: UITableViewController,  UISearchResultsUpdatin
         itemTableView.tableHeaderView = searchController.searchBar
         
         title = "CoMo Food Inspections"
-
+        tableView.backgroundColor = UIColor.init(red: 0.09, green: 0.38, blue: 0.62, alpha: 1.0)
+           //tableView.backgroundColor = UIColor.init(red: 0.46, green: 0.45, blue: 0.45, alpha: 1.0)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -64,21 +65,24 @@ class PrimaryTableViewController: UITableViewController,  UISearchResultsUpdatin
         let cell = tableView.dequeueReusableCell(withIdentifier: "Established List Cell", for: indexPath)
         
         cell.textLabel?.text = fillteredItems[indexPath.row].establishment?.name!
-        cell.detailTextLabel?.text = fillteredItems[indexPath.row].inspection?.violations?.criticality!
-        
-        
+        cell.detailTextLabel?.text = fillteredItems[indexPath.row].establishment?.address!
+        cell.backgroundColor = UIColor.init(red: 0.46, green: 0.45, blue: 0.45, alpha: 1.0)
+        //cell.backgroundColor = UIColor.init(red: 0.09, green: 0.38, blue: 0.62, alpha: 1.0)
         //print(items[indexPath.row].inspection?.results?.critical, items[indexPath.row].inspection?.results?.noncritical)
         
         if let crit = items[indexPath.row].inspection?.results?.critical{
             switch crit{
             case 0..<2:
-                cell.backgroundColor = UIColor.green
+                cell.textLabel?.textColor = UIColor.init(red: 0.07, green: 0.67, blue: 0.04, alpha: 1.0)
+                //cell.backgroundColor = UIColor.green
             case 2..<4:
-                cell.backgroundColor = UIColor.yellow
+                cell.textLabel?.textColor = UIColor.init(red: 0.89, green: 0.89, blue: 0.00, alpha: 1.0)
+                //cell.textLabel?.textColor = UIColor.yellow
+                //cell.backgroundColor = UIColor.yellow
             case 4..<6:
-                cell.backgroundColor = UIColor.orange
+                cell.textLabel?.textColor = UIColor.orange
             default:
-                cell.backgroundColor = UIColor.red
+                cell.textLabel?.textColor = UIColor.red
                 
             }
         }

@@ -12,6 +12,7 @@ import CoreLocation
 
 class EstablishmentDetailViewController: UIViewController, CLLocationManagerDelegate {
     
+    @IBOutlet weak var violationColor: UIImageView!
     @IBOutlet weak var restaurantName: UILabel!
     @IBOutlet weak var restaurantAddress: UILabel!
     @IBOutlet weak var numberViolations: UILabel!
@@ -25,6 +26,23 @@ class EstablishmentDetailViewController: UIViewController, CLLocationManagerDele
             restaurantName.text = item?.establishment?.name
             restaurantAddress.text = item?.establishment?.address
             restaurantAddress.sizeToFit()
+        if let crit = item?.inspection?.results?.critical{
+            switch crit{
+            case 0..<2:
+                violationColor.backgroundColor = UIColor.init(red: 0.07, green: 0.67, blue: 0.04, alpha: 1.0)
+            //cell.backgroundColor = UIColor.green
+            case 2..<4:
+                violationColor.backgroundColor = UIColor.init(red: 0.89, green: 0.89, blue: 0.00, alpha: 1.0)
+                //cell.textLabel?.textColor = UIColor.yellow
+            //cell.backgroundColor = UIColor.yellow
+            case 4..<6:
+                violationColor.backgroundColor = UIColor.orange
+            default:
+                violationColor.backgroundColor = UIColor.red
+                
+            }
+        }
+        
         let x = item?.inspection?.results?.critical
          let criticalViolations = String(describing: x!)
         

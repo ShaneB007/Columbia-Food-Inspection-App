@@ -32,6 +32,7 @@
 		B43CC1BF1EA5215E00E120F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B43CC1BE1EA5215E00E120F5 /* Assets.xcassets */; };
 		B43CC1C21EA5215E00E120F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B43CC1C01EA5215E00E120F5 /* LaunchScreen.storyboard */; };
 		B48228DF1EBD094B005B014F /* ButtonChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48228DE1EBD094B005B014F /* ButtonChange.swift */; };
+		BAFE8A751EC2ABBB005A2B6E /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFE8A741EC2ABBB005A2B6E /* AboutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		B43CC1C11EA5215E00E120F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B43CC1C31EA5215E00E120F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B48228DE1EBD094B005B014F /* ButtonChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonChange.swift; sourceTree = "<group>"; };
+		BAFE8A741EC2ABBB005A2B6E /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 				3B74347D1EB7AF0200F74BC2 /* Model.swift */,
 				5E6C5A1F1EBCF2B8003A9342 /* PrimaryTableViewController.swift */,
 				5E6C5A211EBD088F003A9342 /* EstablishmentDetailViewController.swift */,
+				BAFE8A741EC2ABBB005A2B6E /* AboutViewController.swift */,
 			);
 			path = ColumbiaFoodInspection;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 				5E3F6B921EC102AA00BF0C63 /* Item+CoreDataProperties.swift in Sources */,
 				5E3F6B8E1EC102AA00BF0C63 /* Results+CoreDataProperties.swift in Sources */,
 				B43CC1BD1EA5215E00E120F5 /* ColumbiaFoodInspection.xcdatamodeld in Sources */,
+				BAFE8A751EC2ABBB005A2B6E /* AboutViewController.swift in Sources */,
 				5E3F6B8C1EC102AA00BF0C63 /* Violations+CoreDataProperties.swift in Sources */,
 				5E3F6B951EC102B700BF0C63 /* Test.swift in Sources */,
 				B48228DF1EBD094B005B014F /* ButtonChange.swift in Sources */,
