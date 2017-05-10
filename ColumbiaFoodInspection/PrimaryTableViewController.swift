@@ -30,7 +30,7 @@ class PrimaryTableViewController: UITableViewController,  UISearchResultsUpdatin
         searchController.searchBar.sizeToFit()
         itemTableView.tableHeaderView = searchController.searchBar
         
-        title = "CoMo Food Inspections"
+        title = "Clean Eats CoMo"
         tableView.backgroundColor = UIColor.init(red: 0.09, green: 0.38, blue: 0.62, alpha: 1.0)
     }
 
